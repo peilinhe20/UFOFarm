@@ -9,15 +9,11 @@ public class GameManager : Singleton<GameManager>
     protected override void Awake()
     {
         base.Awake();
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     void Start(){
         totalScenes = SceneManager.sceneCountInBuildSettings;
-    }
-
-    void Update() {
-        CheatKeyToNextScene();
     }
 
     public void LoadNextScene () {
@@ -25,6 +21,17 @@ public class GameManager : Singleton<GameManager>
 
         if(index + 1 < totalScenes) {
             SceneManager.LoadScene(index + 1);
+        }
+        else{
+            //quit the game or ???
+        }        
+    }
+
+    public void LoadLastScene () {
+        int index = SceneManager.GetActiveScene().buildIndex;
+
+        if(index - 1 >= 0) {
+            SceneManager.LoadScene(index - 1);
         }
         else{
             //quit the game or ???
