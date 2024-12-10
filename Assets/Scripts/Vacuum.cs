@@ -8,7 +8,13 @@ public class Vacuum : MonoBehaviour
     public float destroyDistance = 2f;
     public float dampingFactor = 2f;    // Damping to reduce bouncing
     public float vacuumSpeed = 5f;
+    private AudioSource vacuumAudio;
 
+    void Start()
+    {
+        // Get the AudioSource component attached to the object
+        vacuumAudio = GetComponent<AudioSource>();
+    }
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Vacuumable")) // Tag vacuumable objects
@@ -26,6 +32,7 @@ public class Vacuum : MonoBehaviour
     {
         if (other.CompareTag("Vacuumable")) // Ensure the object has the "Vacuumable" tag
         {
+            vacuumAudio.Play();
             // Calculate direction toward the UFO
             Vector3 direction = (transform.position - other.transform.position).normalized;
 
