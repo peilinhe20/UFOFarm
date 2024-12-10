@@ -301,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7208883189525943398, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
       propertyPath: m_Name
-      value: Animal (1)
+      value: Cloud
       objectReference: {fileID: 0}
     - target: {fileID: 8402819386063924455, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
       propertyPath: m_Sprite
@@ -1269,7 +1269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7208883189525943398, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
       propertyPath: m_Name
-      value: Animal
+      value: Pig
       objectReference: {fileID: 0}
     - target: {fileID: 8402819386063924455, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
       propertyPath: m_Sprite
@@ -1303,6 +1303,18 @@ PrefabInstance:
     - target: {fileID: 1624832338611585749, guid: 1dcaaa74a59e6c047bbda96eae4178be, type: 3}
       propertyPath: vacuumSpeed
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624832338611585749, guid: 1dcaaa74a59e6c047bbda96eae4178be, type: 3}
+      propertyPath: correctPairs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624832338611585749, guid: 1dcaaa74a59e6c047bbda96eae4178be, type: 3}
+      propertyPath: correctPairs.Array.data[0].animal1
+      value: Pig
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624832338611585749, guid: 1dcaaa74a59e6c047bbda96eae4178be, type: 3}
+      propertyPath: correctPairs.Array.data[0].animal2
+      value: Cloud
       objectReference: {fileID: 0}
     - target: {fileID: 3239376404165369020, guid: 1dcaaa74a59e6c047bbda96eae4178be, type: 3}
       propertyPath: m_Radius
