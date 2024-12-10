@@ -55,7 +55,6 @@ public class AnimalVacuum : MonoBehaviour
     {
         if (isBeingVacuumed && ufo != null)
         {
-            Debug.Log("sound playing");
 
             // Move toward the UFO's position
             transform.position = Vector3.MoveTowards(
