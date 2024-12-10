@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1179775661895225940}
   m_Layer: 0
   m_Name: CloudPig
-  m_TagString: Vacuumable
+  m_TagString: ResultAnimal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -82,16 +82,16 @@ public class Vacuum : MonoBehaviour
     public void CombineAnimals(string animal1, string animal2)
     {
         Debug.Log($"Combined {animal1} and {animal2}!");
-        Vector3 vacuumZoneCenter = GetComponent<Collider>().bounds.center;
+        Vector3 vacuumZoneCenter = GetComponent<Collider2D>().bounds.center;
         if ( (animal1 == "Pig" && animal2 == "Cloud") ||
             (animal1 == "Cloud" && animal2 == "Pig"))
         {
-            Debug.Log("Cloudpig is here!!");
-            string prefabPath = "Prefabs/" + "cloudPig"; 
+            string prefabPath = "Prefab/" + "cloudPig"; 
             GameObject combinedAnimalPrefab = Resources.Load<GameObject>(prefabPath);
             if (combinedAnimalPrefab != null)
             {
                 GameObject combinedAnimal = Instantiate(combinedAnimalPrefab, vacuumZoneCenter, Quaternion.identity);
+                Debug.Log("Cloudpig is here!!");
             }
 
         }
