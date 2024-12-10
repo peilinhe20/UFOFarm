@@ -57,7 +57,7 @@ public class Vacuum : MonoBehaviour
             Debug.Log("vacuumed animal added!");
             // Check for a valid pair
             CheckForPair(animalName);
-            if (vacuumedAnimals.Count > 0)
+            if (vacuumedAnimals.Count > 1)
             {
                 for (int i = 0; i < vacuumedAnimals.Count; i++)
                 {
