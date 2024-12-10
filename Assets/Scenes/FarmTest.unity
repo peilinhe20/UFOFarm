@@ -2150,6 +2150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UFO
       objectReference: {fileID: 0}
+    - target: {fileID: 872005533044954824, guid: 1dcaaa74a59e6c047bbda96eae4178be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1624832338611585749, guid: 1dcaaa74a59e6c047bbda96eae4178be, type: 3}
       propertyPath: m_Enabled
       value: 1
