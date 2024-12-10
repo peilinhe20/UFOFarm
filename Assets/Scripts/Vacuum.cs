@@ -91,10 +91,6 @@ public class Vacuum : MonoBehaviour
                 vacuumedAnimals.Remove(pair.animal2);
                 break;
             }
-            else
-            {
-
-            }
         }
     }
 
