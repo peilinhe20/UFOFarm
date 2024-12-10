@@ -115,6 +115,19 @@ public class Vacuum : MonoBehaviour
             //}
 
         }
+        if ((animal1 == "Chicken" && animal2 == "Tree") ||
+            (animal1 == "Tree" && animal2 == "Chicken"))
+        {
+            combinedAnimalsQueue.Enqueue("ChickenTree");
+            //string prefabPath = "Prefab/" + "cloudPig"; 
+            //GameObject combinedAnimalPrefab = Resources.Load<GameObject>(prefabPath);
+            //if (combinedAnimalPrefab != null)
+            //{
+            //    GameObject combinedAnimal = Instantiate(combinedAnimalPrefab, vacuumZoneCenter, Quaternion.identity);
+            //    Debug.Log("Cloudpig is here!!");
+            //}
+
+        }
 
     }
 
@@ -126,11 +139,19 @@ public class Vacuum : MonoBehaviour
             string nextAnimal = "Prefab/" + combinedAnimalsQueue.Dequeue();
             GameObject AnimalPrefab = Resources.Load<GameObject>(nextAnimal);
             Vector3 vacuumZoneCenter = GetComponent<Collider2D>().bounds.center;
+
             if (AnimalPrefab != null)
             {
                 GameObject combinedAnimal = Instantiate(AnimalPrefab, vacuumZoneCenter, Quaternion.identity);
-                Debug.Log("combined animal is here");
+
+                // Add a MoveDown component to the instantiated animal
+                MoveDown moveDownScript = combinedAnimal.AddComponent<MoveDown>();
+                moveDownScript.moveSpeed = 3f; // Set the speed of the movement
+                moveDownScript.moveDistance = 2f; // Set the distance to move down
+
+                Debug.Log("combined animal is here and moving down");
             }
         }
     }
+
 }
