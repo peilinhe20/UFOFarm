@@ -450,6 +450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 7478040701072133363, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8402819386063924455, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1048,11 +1052,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2423715398733904023, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 27.324455
+      value: 19.2
       objectReference: {fileID: 0}
     - target: {fileID: 2423715398733904023, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 20.48
+      value: 10.8
       objectReference: {fileID: 0}
     - target: {fileID: 5269376695993074746, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
       propertyPath: m_LocalScale.x
@@ -1068,7 +1072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5269376695993074746, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.92
+      value: 6.49
       objectReference: {fileID: 0}
     - target: {fileID: 5269376695993074746, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1114,6 +1118,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chicken
       objectReference: {fileID: 0}
+    - target: {fileID: 7478040701072133363, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
+      propertyPath: m_Mass
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478040701072133363, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8402819386063924455, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1121,8 +1133,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7208883189525943398, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1059494798}
   m_SourcePrefab: {fileID: 100100000, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
+--- !u!1 &1059494797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7208883189525943398, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
+  m_PrefabInstance: {fileID: 1059494796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1059494798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059494797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4be95d976654e1ea1c2533aaf00fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceMagnitude: 0.2
+  interval: 2
 --- !u!1 &1247213502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,7 +1698,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.069419995}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1675,7 +1709,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.13884}
   m_EdgeRadius: 0
 --- !u!1 &1900199352
 GameObject:
@@ -2291,6 +2325,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pig
       objectReference: {fileID: 0}
+    - target: {fileID: 7478040701072133363, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
+      propertyPath: m_Mass
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478040701072133363, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8402819386063924455, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2298,8 +2340,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7208883189525943398, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3192483194055006698}
   m_SourcePrefab: {fileID: 100100000, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
+--- !u!1 &3192483194055006697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7208883189525943398, guid: 89b0742541ba1fc4da3418890c657d78, type: 3}
+  m_PrefabInstance: {fileID: 3192483194055006696}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3192483194055006698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3192483194055006697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4be95d976654e1ea1c2533aaf00fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceMagnitude: 0.2
+  interval: 2
 --- !u!1001 &5187694317832686782
 PrefabInstance:
   m_ObjectHideFlags: 0

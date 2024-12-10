@@ -173,3 +173,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ufo: {fileID: 0}
   pullSpeed: 10
+  stopDistance: 0.5
+  squeezeFactor: 0.5
