@@ -5,7 +5,6 @@ using UnityEngine;
 public class Vacuum : MonoBehaviour
 {
     public float vacuumForce = 25f;
-    public float destroyDistance = 2f;
     public float dampingFactor = 2f;    // Damping to reduce bouncing
     public float vacuumSpeed = 5f;
     private AudioSource vacuumAudio;
