@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Vacuumable
+  - Vacuumzone
+  - VacuumZone
   layers:
   - Default
   - TransparentFX

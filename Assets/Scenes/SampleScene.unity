@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 283239188}
   m_Layer: 0
   m_Name: VacuumZone
-  m_TagString: Untagged
+  m_TagString: VacuumZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,9 +240,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.002262184, y: 0.032909814}
+  m_Offset: {x: 0.002262184, y: 0.13301042}
   serializedVersion: 2
-  m_Radius: 0.44464177
+  m_Radius: 0.54474217
 --- !u!114 &283239188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,8 +255,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49cbc475b093014ebce9a89267b4c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vacuumForce: 20
+  vacuumForce: 0
   destroyDistance: 0.5
+  dampingFactor: 2
+  vacuumSpeed: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +490,7 @@ GameObject:
   - component: {fileID: 1727179609}
   - component: {fileID: 1727179612}
   - component: {fileID: 1727179611}
+  - component: {fileID: 1727179613}
   m_Layer: 0
   m_Name: Animal
   m_TagString: Vacuumable
@@ -619,7 +622,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.05
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -634,6 +637,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1727179613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727179608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc57157f1ec2aeb4e9bc148745d2c7ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ufo: {fileID: 2124963259}
+  pullSpeed: 20
 --- !u!1 &1816004397
 GameObject:
   m_ObjectHideFlags: 0
