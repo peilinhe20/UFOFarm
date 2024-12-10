@@ -9,13 +9,13 @@ namespace Febucci.UI.Examples
     class ExampleEvents : MonoBehaviour
     {
         // ---- PART OF THE SCRIPT THAT YOU'RE PROBABLY INTERESTED IT ----
-        
+        private AudioSource audioSource;
         void Start()
         {
             //Subscribe to the event
             typewriter.onMessage.AddListener(OnMessage);
-            
-            
+            audioSource = GetComponent<AudioSource>();
+
             dialogueIndex = 0;
             CurrentLineShown = false;
             typewriter.ShowText(dialoguesLines[dialogueIndex]);
@@ -126,6 +126,10 @@ namespace Febucci.UI.Examples
             dialogueIndex++;
             if(dialogueIndex<dialogueLength)
             {
+                if (audioSource != null && !audioSource.isPlaying)
+                {
+                    audioSource.Play();
+                }
                 typewriter.ShowText(dialoguesLines[dialogueIndex]);
             }
             else

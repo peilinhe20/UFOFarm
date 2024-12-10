@@ -19,6 +19,10 @@ public class Vacuum : MonoBehaviour
         public string animal2;
         public string combinedAnimalName;
     }
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
         // Get the AudioSource component attached to the object
