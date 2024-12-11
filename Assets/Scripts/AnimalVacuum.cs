@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AnimalVacuum : MonoBehaviour
 {
-    public Transform ufo;               // Public input for the UFO's transform
+    private Transform ufo;               // Public input for the UFO's transform
     public float pullSpeed = 3f;        // Speed at which the animal moves toward the UFO
     public float stopDistance = 0.5f;   // Distance to the UFO where the animal is destroyed
     public float squeezeFactor = 1f;  // Maximum squeezing effect (0.5 = 50% scale)
@@ -13,6 +13,17 @@ public class AnimalVacuum : MonoBehaviour
 
     private void Start()
     {
+
+        GameObject ufoObject = GameObject.FindWithTag("UFO");
+        if (ufoObject != null)
+        {
+            ufo = ufoObject.transform;
+        }
+        else
+        {
+            Debug.LogError("UFO object not found! Ensure it has the correct tag.");
+        }
+
         // Record the original scale of the sprite
         originalScale = transform.localScale;
 
