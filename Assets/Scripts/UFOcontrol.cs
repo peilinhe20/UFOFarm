@@ -13,8 +13,8 @@ public class UFOcontrol : MonoBehaviour
     {
         Ctrl = GameObject.Find("Serial_test");
         Recieve = Ctrl.GetComponent<SerialReceive>();
-        float moveX = Recieve.A;
-        float moveY = Input.GetAxis("Vertical");
+        float moveX = Recieve.SerialX;
+        float moveY = Recieve.SerialY;
         transform.Translate(new Vector3(moveX, moveY, 0) * moveSpeed * Time.deltaTime);
     }
 }

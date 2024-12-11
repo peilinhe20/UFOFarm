@@ -8,7 +8,8 @@ public class SerialReceive : MonoBehaviour
     //上記URLのSerialHandler.cのクラス
     public SerialHandler serialHandler;
 
-    public int A;
+    public string[] A;
+    public float SerialX, SerialY;
 
     void Start()
     {
@@ -23,7 +24,10 @@ public class SerialReceive : MonoBehaviour
                 new string[] { "\n" }, System.StringSplitOptions.None);
         try
         {
-            A = int.Parse(data[0]);
+            A = data[0].Split(',');
+            SerialX = float.Parse(A[0]);
+            SerialY = float.Parse(A[1]);
+            //SerialX = int.Parse(data[0]);
             Debug.Log(data[0]);//Unityのコンソールに受信データを表示
         }
         catch (System.Exception e)
