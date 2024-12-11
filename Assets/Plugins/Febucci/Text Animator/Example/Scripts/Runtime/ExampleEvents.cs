@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Febucci.UI.Examples
 {
     [AddComponentMenu(""), DisallowMultipleComponent]
-    public class ExampleEvents : MonoBehaviour
+    class ExampleEvents : MonoBehaviour
     {
         // ---- PART OF THE SCRIPT THAT YOU'RE PROBABLY INTERESTED IT ----
         private AudioSource audioSource;
@@ -135,7 +135,6 @@ namespace Febucci.UI.Examples
             else
             {
                 typewriter.StartDisappearingText();
-                this.enabled = false;
             }
         }
 
