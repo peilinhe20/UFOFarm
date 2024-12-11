@@ -377,6 +377,12 @@ MonoBehaviour:
   - animal1: Chicken
     animal2: Tree
     combinedAnimalName: 
+  - animal1: Cow
+    animal2: Shovel
+    combinedAnimalName: 
+  - animal1: Toilet
+    animal2: Hippo
+    combinedAnimalName: 
 --- !u!82 &33686754035293555
 AudioSource:
   m_ObjectHideFlags: 0
