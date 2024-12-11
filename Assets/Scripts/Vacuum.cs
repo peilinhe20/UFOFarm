@@ -124,14 +124,11 @@ public class Vacuum : MonoBehaviour
             (animal1 == "Tree" && animal2 == "Chicken"))
         {
             combinedAnimalsQueue.Enqueue("ChickenTree");
-            //string prefabPath = "Prefab/" + "cloudPig"; 
-            //GameObject combinedAnimalPrefab = Resources.Load<GameObject>(prefabPath);
-            //if (combinedAnimalPrefab != null)
-            //{
-            //    GameObject combinedAnimal = Instantiate(combinedAnimalPrefab, vacuumZoneCenter, Quaternion.identity);
-            //    Debug.Log("Cloudpig is here!!");
-            //}
-
+        }
+        if ((animal1 == "Cow" && animal2 == "Shovel") ||
+            (animal1 == "Shovel" && animal2 == "Cow"))
+        {
+            combinedAnimalsQueue.Enqueue("ShovelCow");
         }
 
     }
