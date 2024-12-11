@@ -130,6 +130,11 @@ public class Vacuum : MonoBehaviour
         {
             combinedAnimalsQueue.Enqueue("ShovelCow");
         }
+        if ((animal1 == "Hippo" && animal2 == "Toilet") ||
+            (animal1 == "Toilet" && animal2 == "Hippo"))
+        {
+            combinedAnimalsQueue.Enqueue("ToiletHippo");
+        }
 
     }
 
