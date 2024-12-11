@@ -35,6 +35,11 @@ public class Vacuum : MonoBehaviour
         {
             InstantiateAnimal();
         }
+
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            Debug.Log(vacuumedAnimals.Count);
+            Debug.Log(combinedAnimalsQueue.Count);
+        }
     }
     private void OnTriggerStay2D(Collider2D other)
     {

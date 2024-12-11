@@ -6,7 +6,7 @@ public class UFOcontrol : MonoBehaviour
     public float moveSpeed = 5f;
 
     void Awake() {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
     void Update()
     {
