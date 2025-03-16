@@ -9,7 +9,7 @@ public class SerialReceive : MonoBehaviour
     public SerialHandler serialHandler;
 
     public string[] A;
-    public float SerialX, SerialY;
+    public float SerialX, SerialY, Enter;
 
     void Start()
     {
@@ -27,6 +27,7 @@ public class SerialReceive : MonoBehaviour
             A = data[0].Split(',');
             SerialX = float.Parse(A[0]);
             SerialY = float.Parse(A[1]);
+            Enter = float.Parse(A[2]);
             //SerialX = int.Parse(data[0]);
             Debug.Log(data[0]);//Unityのコンソールに受信データを表示
         }
