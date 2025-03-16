@@ -38,6 +38,10 @@ public class GameManager : Singleton<GameManager>
         }        
     }
 
+    public void LoadFirstScene () {
+    SceneManager.LoadScene(0);
+    }
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
