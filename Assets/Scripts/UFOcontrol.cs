@@ -5,13 +5,18 @@ public class UFOcontrol : MonoBehaviour
 {
     public float moveSpeed = 5f;
 
+    private GameObject Ctrl;
+    SerialReceive Recieve;
+
     void Awake() {
         //DontDestroyOnLoad(this.gameObject);
     }
     void Update()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveY = Input.GetAxis("Vertical");
+        Ctrl = GameObject.Find("Serial_test");
+        Recieve = Ctrl.GetComponent<SerialReceive>();
+        float moveX = Recieve.SerialX;
+        float moveY = Recieve.SerialY;
         transform.Translate(new Vector3(moveX, moveY, 0) * moveSpeed * Time.deltaTime);
     }
 }
