@@ -3,7 +3,7 @@ using UnityEngine;
 public class PrefabLoader : MonoBehaviour
 {
     public GameObject prefab; // Drag your prefab here in the Inspector
-    private static bool isLoaded = false;
+    public static bool isLoaded = false;
 
     private void Awake()
     {
