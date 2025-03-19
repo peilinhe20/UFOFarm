@@ -58,7 +58,8 @@ public class AnimalVacuum : MonoBehaviour
             }
 
             // Reset the scale to its original value
-            transform.localScale = originalScale;
+            //transform.localScale = originalScale;
+            //Debug.Log("reset scale");
         }
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -37,8 +38,9 @@ public class Vacuum : MonoBehaviour
         }
 
         if(Input.GetKeyDown(KeyCode.Space)) {
-            Debug.Log(vacuumedAnimals.Count);
-            Debug.Log(combinedAnimalsQueue.Count);
+            //Debug.Log(vacuumedAnimals.Count);
+            //Debug.Log(combinedAnimalsQueue.Count);
+            Debug.Log(string.Join(", ", vacuumedAnimals));
         }
     }
     private void OnTriggerStay2D(Collider2D other)
@@ -66,13 +68,13 @@ public class Vacuum : MonoBehaviour
             Debug.Log("vacuumed animal added!");
             // Check for a valid pair
             CheckForPair(animalName);
-            if (vacuumedAnimals.Count > 1)
+            /*if (vacuumedAnimals.Count > 1)
             {
                 for (int i = 0; i < vacuumedAnimals.Count; i++)
                 {
                     combinedAnimalsQueue.Enqueue(vacuumedAnimals[i]);
                 }
-            }
+            }*/
 
             // Calculate direction toward the UFO
             Vector3 direction = (transform.position - other.transform.position).normalized;
@@ -110,7 +112,9 @@ public class Vacuum : MonoBehaviour
         if ( (animal1 == "Pig" && animal2 == "Cloud") ||
             (animal1 == "Cloud" && animal2 == "Pig"))
         {
-            combinedAnimalsQueue.Enqueue("cloudPig");
+            //combinedAnimalsQueue.Enqueue("cloudPig");
+            vacuumedAnimals.Add("CloudPig");
+
             //string prefabPath = "Prefab/" + "cloudPig"; 
             //GameObject combinedAnimalPrefab = Resources.Load<GameObject>(prefabPath);
             //if (combinedAnimalPrefab != null)
@@ -123,27 +127,33 @@ public class Vacuum : MonoBehaviour
         if ((animal1 == "Chicken" && animal2 == "Tree") ||
             (animal1 == "Tree" && animal2 == "Chicken"))
         {
-            combinedAnimalsQueue.Enqueue("ChickenTree");
+            //combinedAnimalsQueue.Enqueue("ChickenTree");
+            vacuumedAnimals.Add("ChickenTree");
         }
         if ((animal1 == "Cow" && animal2 == "Shovel") ||
             (animal1 == "Shovel" && animal2 == "Cow"))
         {
-            combinedAnimalsQueue.Enqueue("ShovelCow");
+            //combinedAnimalsQueue.Enqueue("ShovelCow");
+            vacuumedAnimals.Add("ShovelCow");
         }
         if ((animal1 == "Hippo" && animal2 == "Toilet") ||
             (animal1 == "Toilet" && animal2 == "Hippo"))
         {
-            combinedAnimalsQueue.Enqueue("ToiletHippo");
+            //combinedAnimalsQueue.Enqueue("ToiletHippo");
+            vacuumedAnimals.Add("ToiletHippo");
         }
 
     }
 
     public void InstantiateAnimal()
     {
-        if (combinedAnimalsQueue.Count > 0)
+        //if (combinedAnimalsQueue.Count > 0)
+        if (vacuumedAnimals.Count > 0)
         {
             Debug.Log("dispensing...");
-            string nextAnimal = "Prefab/" + combinedAnimalsQueue.Dequeue();
+            //string nextAnimal = "Prefab/" + combinedAnimalsQueue.Dequeue();
+            string nextAnimal = "Prefab/" + vacuumedAnimals[0];
+            vacuumedAnimals.Remove(vacuumedAnimals[0]);
             GameObject AnimalPrefab = Resources.Load<GameObject>(nextAnimal);
             Vector3 vacuumZoneCenter = GetComponent<Collider2D>().bounds.center;
 

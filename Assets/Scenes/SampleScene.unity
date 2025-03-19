@@ -2735,6 +2735,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4178447883855071627, guid: 7e31a9a27261544e998dfa7f881f8caa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7278488031076652295, guid: 7e31a9a27261544e998dfa7f881f8caa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.81
@@ -2778,6 +2782,10 @@ PrefabInstance:
     - target: {fileID: 8106835482350822901, guid: 7e31a9a27261544e998dfa7f881f8caa, type: 3}
       propertyPath: m_Name
       value: Toilet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106835482350822901, guid: 7e31a9a27261544e998dfa7f881f8caa, type: 3}
+      propertyPath: m_TagString
+      value: Vacuumable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2969,6 +2977,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3558530413059395136, guid: f87b28b112ceb4a75aabd8b86e3529cb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6253997082581728468, guid: f87b28b112ceb4a75aabd8b86e3529cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.52
@@ -3013,6 +3025,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shovel
       objectReference: {fileID: 0}
+    - target: {fileID: 7252693975309469465, guid: f87b28b112ceb4a75aabd8b86e3529cb, type: 3}
+      propertyPath: m_TagString
+      value: Vacuumable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3026,9 +3042,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 216191274487755285, guid: d669628ba3472405aaff3f2bbf2f5f21, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7536326984081986494, guid: d669628ba3472405aaff3f2bbf2f5f21, type: 3}
       propertyPath: m_Name
       value: Tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536326984081986494, guid: d669628ba3472405aaff3f2bbf2f5f21, type: 3}
+      propertyPath: m_TagString
+      value: Vacuumable
       objectReference: {fileID: 0}
     - target: {fileID: 8132712138669717554, guid: d669628ba3472405aaff3f2bbf2f5f21, type: 3}
       propertyPath: m_LocalPosition.x
