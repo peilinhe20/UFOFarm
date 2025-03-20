@@ -7,8 +7,8 @@ public class SerialReceive : MonoBehaviour
     //https://qiita.com/yjiro0403/items/54e9518b5624c0030531
     //上記URLのSerialHandler.cのクラス
     public SerialHandler serialHandler;
-    public float UfoH, UfoV;
-    public int UfoEnter;
+    private string[] A;
+    public float SerialX, SerialY, Enter;
 
     void Start()
     {
@@ -23,6 +23,11 @@ public class SerialReceive : MonoBehaviour
                 new string[] { "\n" }, System.StringSplitOptions.None);
         try
         {
+            A = data[0].Split(',');
+            SerialX = float.Parse(A[0]);
+            SerialY = float.Parse(A[1]);
+            Enter = float.Parse(A[2]);
+            //SerialX = int.Parse(data[0]);
             Debug.Log(data[0]);//Unityのコンソールに受信データを表示
         }
         catch (System.Exception e)

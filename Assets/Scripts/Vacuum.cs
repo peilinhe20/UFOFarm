@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Vacuum : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Vacuum : MonoBehaviour
     private AudioSource vacuumAudio;
     private List<string> vacuumedAnimals = new List<string>();
     private Queue<string> combinedAnimalsQueue = new Queue<string>();
+    private GameObject Ctrl;
+    SerialReceive Recieve;
     [System.Serializable]
     public struct AnimalPair
     {
@@ -32,12 +35,18 @@ public class Vacuum : MonoBehaviour
     private void Update()
     {
         // Check if the player presses the E key
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && SceneManager.GetActiveScene().name == "FarmTest")
         {
             InstantiateAnimal();
         }
+        /*Ctrl = GameObject.Find("Serial_test");
+        Recieve = Ctrl.GetComponent<SerialReceive>();
+        if (Recieve.Enter == 1)
+        {
+            InstantiateAnimal();
+        }*/
 
-        if(Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space)) {
             //Debug.Log(vacuumedAnimals.Count);
             //Debug.Log(combinedAnimalsQueue.Count);
             Debug.Log(string.Join(", ", vacuumedAnimals));

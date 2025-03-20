@@ -39,7 +39,13 @@ public class GameManager : Singleton<GameManager>
     }
 
     public void LoadFirstScene () {
-    SceneManager.LoadScene(0);
+        GameObject ufoObject = GameObject.Find("MyPrefabInstance");
+        if (ufoObject != null)
+        {
+            Destroy(ufoObject);
+            PrefabLoader.isLoaded = false;
+        }
+        SceneManager.LoadScene(0);
     }
 
     private void OnEnable()
