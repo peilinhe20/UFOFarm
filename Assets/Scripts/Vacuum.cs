@@ -15,6 +15,7 @@ public class Vacuum : MonoBehaviour
     private List<string> vacuumedAnimals = new List<string>();
     private Queue<string> combinedAnimalsQueue = new Queue<string>();
     private GameObject Ctrl;
+    private float pEnter = 0;
     SerialReceive Recieve;
     [System.Serializable]
     public struct AnimalPair
@@ -35,22 +36,23 @@ public class Vacuum : MonoBehaviour
     private void Update()
     {
         // Check if the player presses the E key
-        if (Input.GetKeyDown(KeyCode.E) && SceneManager.GetActiveScene().name == "FarmTest")
-        {
-            InstantiateAnimal();
-        }
-        /*Ctrl = GameObject.Find("Serial_test");
-        Recieve = Ctrl.GetComponent<SerialReceive>();
-        if (Recieve.Enter == 1)
+        /*if (Input.GetKeyDown(KeyCode.E) && SceneManager.GetActiveScene().name == "FarmTest")
         {
             InstantiateAnimal();
         }*/
+        Ctrl = GameObject.Find("Serial_test");
+        Recieve = Ctrl.GetComponent<SerialReceive>();
+        if (pEnter == 0 && Recieve.Enter == 1 && SceneManager.GetActiveScene().name == "FarmTest")
+        {
+            InstantiateAnimal();
+        }
 
         if (Input.GetKeyDown(KeyCode.Space)) {
             //Debug.Log(vacuumedAnimals.Count);
             //Debug.Log(combinedAnimalsQueue.Count);
             Debug.Log(string.Join(", ", vacuumedAnimals));
         }
+        pEnter = Recieve.Enter;
     }
     private void OnTriggerStay2D(Collider2D other)
     {

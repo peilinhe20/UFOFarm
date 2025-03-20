@@ -12,14 +12,14 @@ public class UFOcontrol : MonoBehaviour
     }
     void Update()
     {
-        float moveX = Input.GetAxis("Horizontal");
+        /*float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
-        transform.Translate(new Vector3(moveX, moveY, 0) * moveSpeed * Time.deltaTime);
-        /*Ctrl = GameObject.Find("Serial_test");
+        transform.Translate(new Vector3(moveX, moveY, 0) * moveSpeed * Time.deltaTime);*/
+        Ctrl = GameObject.Find("Serial_test");
         Recieve = Ctrl.GetComponent<SerialReceive>();
         float moveX = Recieve.SerialX;
         float moveY = Recieve.SerialY;
-        transform.Translate(new Vector3(moveX, moveY, 0) * moveSpeed * Time.deltaTime);*/
+        transform.Translate(new Vector3(moveX, moveY, 0) * moveSpeed * Time.deltaTime);
         if (transform.position.x <= -7)
         {
             transform.position = new Vector3(-7, transform.position.y, 0);

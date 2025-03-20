@@ -15,23 +15,50 @@ public class autoBacktoTitle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Input.anyKey)
+        GameObject Ctrl = GameObject.Find("Serial_test");
+        if (Ctrl != null)
         {
-            step_time += Time.deltaTime;
+            SerialReceive Recieve = Ctrl.GetComponent<SerialReceive>();
+            if (!Input.anyKey && Recieve.SerialX == 0 && Recieve.SerialY == 0 && Recieve.Enter == 0)
+            {
+                step_time += Time.deltaTime;
+            }
+            else
+            {
+                step_time = 0;
+            }
+            if (step_time > 60f)
+            {
+                GameObject ufoObject = GameObject.Find("MyPrefabInstance");
+                if (ufoObject != null)
+                {
+                    Destroy(ufoObject);
+                    PrefabLoader.isLoaded = false;
+                }
+                SceneManager.LoadScene(0);
+            }
+
         }
         else
         {
-            step_time = 0;
-        }
-        if (step_time > 10f)
-        {
-            GameObject ufoObject = GameObject.Find("MyPrefabInstance");
-            if (ufoObject != null)
+            if (!Input.anyKey)
             {
-                Destroy(ufoObject);
-                PrefabLoader.isLoaded = false;
+                step_time += Time.deltaTime;
             }
-            SceneManager.LoadScene(0);
+            else
+            {
+                step_time = 0;
+            }
+            if (step_time > 60f)
+            {
+                GameObject ufoObject = GameObject.Find("MyPrefabInstance");
+                if (ufoObject != null)
+                {
+                    Destroy(ufoObject);
+                    PrefabLoader.isLoaded = false;
+                }
+                SceneManager.LoadScene(0);
+            }
         }
     }
 
