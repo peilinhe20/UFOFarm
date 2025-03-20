@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Vacuum : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class Vacuum : MonoBehaviour
     private void Update()
     {
         // Check if the player presses the E key
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && SceneManager.GetActiveScene().name == "FarmTest")
         {
             InstantiateAnimal();
         }
